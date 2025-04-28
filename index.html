@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - mdn</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Html - mdn</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>What is HTML?</h2>
+            <p>
+                HTML (HyperText Markup Language) is a markup language that defines the content and structure of any
+                website.
+                It consists of a series of elements made up of tags and content.
+                <strong>tags</strong> define the structure and functionality, while <strong>content</strong> is what
+                gets displayed on the webpage.
+            </p>
+
+            <h2>Structure of an element</h2>
+
+            <code>Opening tag → &lt;p&gt; Content &lt;/p&gt; ← Closing tag</code>
+
+            <h2>Nesting elements</h2>
+
+            <code>&lt;p&gt; &lt;strong&gt; <strong> Content </strong> &lt;/strong&gt; &lt;/p&gt;</code>
+
+            <h2>Void elements</h2>
+            <p>
+                Some elements consist of a single tag, primarily used to insert or embed content into a document. These
+                elements called <strong>void elements</strong>, do not require a closing tag.
+            </p>
+
+            <code>&lt;img src="image.jpg" alt="Description"&gt;</code>
+
+        </section>
+
+        <section>
+            <h2>Structure of an HTML document</h2>
+            <pre>
+                1. &lt;!doctype html&gt;
+
+                2. &lt;html lang="en-US"&gt;
+
+                3. &lt;head&gt;
+
+                    4. &lt;meta charset="utf-8" /&gt;
+
+                    5. &lt;title&gt; My webpage &lt;/title&gt;
+
+                &lt;/head&gt;
+
+                6. &lt;body&gt;
+
+                    &lt;p&gt; This is my webpage &lt;/p&gt;
+
+                &lt;/body&gt;
+
+                &lt;/html&gt;
+            </pre>
+
+            <ol>
+                <li>
+                    The <code>&lt;!DOCTYPE html&gt;</code> declaration specifies that the document follows HTML5
+                    standards, ensuring proper browser interpretation and rendering.
+                </li>
+
+                <li>
+                    The <code>&lt;html lang="en-US"&gt;</code> element, known as the <strong>root element</strong>
+                    encloses all page content and defines the document's language for accessibility and search
+                    optimization.
+                </li>
+
+                <li>
+                    The <code>&lt;head&gt;</code> element contains metadata and resources that affect the page's
+                    behavior and appearance, without being directly visible to users.
+                </li>
+
+                <li>
+                    The <code>&lt;meta charset="utf-8" /&gt;</code> element specifies UTF-8 as the character
+                    encoding, ensuring correct display of text from various languages and preventing formatting issues.
+                </li>
+
+                <li>
+                    5.The <code>&lt;title&gt;</code> element defines the page title, shown in the browser tab and used
+                    when
+                    bookmarking the page.
+                </li>
+
+                <li>
+                    The <code>&lt;body&gt;</code> element contains all visible content, including text, images,
+                    videos, and other elements displayed on the page.
+                </li>
+            </ol>
+
+        </section>
+
+        <section>
+            <h2>Tags</h2>
+
+            <h3>Text Heading</h3>
+            <code>&lt;h1&gt;&lt;/h1&gt; - &lt;h6&gt;&lt;/h6&gt;</code>
+
+            <h3>Paragraph</h3>
+            <code>&lt;p&gt;&lt;/p&gt;</code>
+
+            <h3>Link</h3>
+            <code>&lt;a href="https://website"&gt; link &lt;/a&gt;</code>
+
+            <h3>Unordered list</h3>
+            <pre>
+                &lt;ul&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                &lt;/ul&gt;
+            </pre>
+
+            <h3>Ordered list</h3>
+            <pre>
+                &lt;ol&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                    &lt;li&gt; item &lt;/li&gt;
+                &lt;/ol&gt;
+            </pre>
+
+            <h3>Image</h3>
+            <code>&lt;img src="./path/image.png" alt="Description"&gt;</code> <br> <br>
+            <img src="./public/img/allec-gomes-4iat5jkkBvk-unsplash.jpg" alt="Photo of a flower" width="350">
+
+            <h3>Video</h3>
+            <pre>
+                &lt;video controls autoplay loop width="350"&gt;
+                    &lt;source src="./path/video.webm" type="video/webm" &gt;
+                    &lt;source src="./path/video.mp4" type="video/mp4" &gt;
+                &lt;/video&gt;
+            </pre>
+            <video autoplay loop width="350">
+                <source src="./public/13272648_1080_1920_60fps.mp4" type="video/mp4">
+            </video>
+
+            <h3>Form structure and Input types</h3>
+            <pre>
+                &lt;form action="#" method="post"&gt; <br>
+                    &lt;label for="text"&gt;Text:&lt;/label&gt;
+                    &lt;input type="text" id="text" name="text" placeholder="placeholder"&gt;
+                
+                    &lt;label for="email"&gt;Email:&lt;/label&gt;
+                    &lt;input type="email" id="email" name="email" placeholder="placeholder"&gt;
+                
+                    &lt;label for="password"&gt;Password:&lt;/label&gt;
+                    &lt;input type="password" id="password" name="password" placeholder="placeholder"&gt;
+                
+                    &lt;label for="number"&gt;Number:&lt;/label&gt;
+                    &lt;input type="number" id="number" name="number" placeholder="placeholder"&gt;
+                
+                    &lt;label for="date"&gt;Date:&lt;/label&gt;
+                    &lt;input type="date" id="date" name="date"&gt;
+                
+                    &lt;label for="checkbox"&gt;Checkbox:&lt;/label&gt;
+                    &lt;input type="checkbox" id="checkbox" name="checkbox"&gt;
+                
+                    &lt;label for="radio1"&gt;Radio Buttons:&lt;/label&gt;
+                    &lt;span&gt;Option 1&lt;/span&gt;
+                    &lt;input type="radio" id="radio1" name="radio" value="option 1"&gt;
+                    &lt;span&gt;Option 2&lt;/span&gt;
+                    &lt;input type="radio" id="radio2" name="radio" value="option 2"&gt;
+                
+                    &lt;label for="select"&gt;Select:&lt;/label&gt;
+                    &lt;select id="select" name="select"&gt;
+                        &lt;option value="option1"&gt;Option 1&lt;/option&gt;
+                        &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+                        &lt;option value="option3"&gt;Option 3&lt;/option&gt;
+                    &lt;/select&gt;
+                
+                    &lt;label for="textarea"&gt;Textarea:&lt;/label&gt;
+                    &lt;textarea id="textarea" name="textarea" rows="4" placeholder="placeholder"&gt;&lt;/textarea&gt;
+                
+                    &lt;button type="submit"&gt;button&lt;/button&gt; <br>
+                &lt;/form&gt;
+            </pre>
+
+
+            <form action="#" method="post">
+                <label for="text">Text:</label>
+                <input type="text" id="text" name="text" placeholder="placeholder">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="placeholder">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="placeholder">
+
+                <label for="number">Number:</label>
+                <input type="number" id="number" name="number" placeholder="placeholder">
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+
+                <label for="checkbox">Checkbox:</label>
+                <input type="checkbox" id="checkbox" name="checkbox">
+
+                <label for="radio1">Radio Buttons:</label>
+                <span>Option 1</span>
+                <input type="radio" id="radio1" name="radio" value="option 1">
+                <span>Option 2</span>
+                <input type="radio" id="radio2" name="radio" value="option 2">
+
+                <label for="select">Select:</label>
+                <select id="select" name="select">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+
+                <label for="textarea">Textarea:</label>
+                <textarea id="textarea" name="textarea" rows="4" placeholder="placeholder"></textarea>
+
+                <button type="submit">button</button>
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
